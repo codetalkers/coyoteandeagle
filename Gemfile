@@ -32,6 +32,9 @@ gem 'spring',        group: :development
 gem 'unicorn'
 gem 'mysql2'
 gem 'foundation-rails'
+gem 'rails_admin'
+gem 'cancan'
+gem 'devise'
 gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
