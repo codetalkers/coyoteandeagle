@@ -1,0 +1,164 @@
+<div id='row1' class="container-fluid" style="height:800px;background-image:url('/assets/landingpage-c-and-e.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12">
+      <audio id="intro" src="/assets/landing_mix.mp3"></audio>
+    </div>
+  </div>
+</div>
+<div id='row2' class="container-fluid" style="height:400px;background-image:url('/assets/hair-accessories2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-8 col-md-offset-2" style="height:400px;">
+      <div id="trigger"></div>
+      <div id="target">
+        <img id="plane" src="/assets/eagle-2.png"/>
+      </div>
+      <div style="position: absolute;top: 0;left: 0;">
+        <h1 class="text-center">Stories of Language Preservation</h1>
+
+        <h3>
+          In the beginning there was a Coyote and an Eagle, the old coyote was a trickster who was native to the urban
+          area, and the wise Eagle was from the rural reservation. Together they created this story telling platform
+          to learn, preserve, interact and share our diverse Native languages and cultures.
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='row3' class="container-fluid" style="height:600px;background-image:url('/assets/haircut-2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h1 class="text-center" style="color:#fff;font-size:45px;">They were taught in boarding schools<br/>to try and forget their language...</h1>
+      <% @beginning_answers.each do |ba| %>
+      <div class="col-md-2 caption" style="height:226px;">
+        <img src="<%= ba.person.thumbnail %>" style="float:right;"/><br/><div style='font-size:20px;color:#000;float:right;'><%= ba.person.name %><br/><%= ba.person.tribe_name %></div>
+      </div>
+      <div class="col-md-2 caption" style="height:226px;">
+        <blockquote><h3 style="font-size:100%;color:#000;"><%= ba.answer %></h3>
+        <audio controls style="width:110%;margin-top:10px;">
+          <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
+          <p>Your browser does not support the audio element.</p>
+        </audio>
+        </blockquote>
+      </div>
+      <% end %>
+      <% @beginning_answers.each do |ba| %>
+          <div class="col-md-2 caption" style="height:226px;">
+            <img src="<%= ba.person.thumbnail %>" style="float:right;"/><br/><div style='font-size:20px;color:#000;float:right;'><%= ba.person.name %><br/><%= ba.person.tribe_name %></div>
+          </div>
+          <div class="col-md-2 caption" style="height:226px;">
+            <blockquote><h3 style="font-size:100%;color:#000;"><%= ba.answer %></h3>
+              <audio controls style="width:110%;margin-top:10px;">
+                <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
+                <p>Your browser does not support the audio element.</p>
+              </audio>
+            </blockquote>
+          </div>
+      <% end %>
+      <% @beginning_answers.each do |ba| %>
+          <div class="col-md-2 caption" style="height:226px;">
+            <img src="<%= ba.person.thumbnail %>" style="float:right;"/><br/><div style='font-size:20px;color:#000;float:right;'><%= ba.person.name %><br/><%= ba.person.tribe_name %></div>
+          </div>
+          <div class="col-md-2 caption" style="height:226px;">
+            <blockquote><h3 style="font-size:100%;color:#000;font-weight:800;"><%= ba.answer %></h3>
+              <audio controls style="width:110%;margin-top:10px;">
+                <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
+                <p>Your browser does not support the audio element.</p>
+              </audio>
+            </blockquote>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div id='row4' class="container-fluid" style="height:400px;background-color:#ccc;background-image:url('/assets/ledger.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h1 class="text-center">Intermediate</h1>
+    </div>
+  </div>
+</div>
+<div id='row5' class="container-fluid" style="height:400px;background-color:#fff;background-image:url('');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h1 class="text-center">Advanced</h1>
+    </div>
+  </div>
+</div>
+<div id='row5' class="container-fluid" style="height:700px;background-color:#dcdcdc;background-image:url('/assets/road-2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h1 class="text-center">Interaction</h1>
+    </div>
+  </div>
+</div>
+<div id='footer' class="container-fluid" style="height:150px;background-color:#000;background-image:url('');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h3 style="padding-left:20px;">coyote & eagle dot com</h3>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function ($) {
+        document.getElementById("intro").play();
+        var flightpath = {
+            entry: {
+                curviness: 1.25,
+                autoRotate: true,
+                values: [
+                    {x: 100, y: -20},
+                    {x: 300, y: 10}
+                ]
+            },
+            looping: {
+                curviness: 1.25,
+                autoRotate: true,
+                values: [
+                    {x: 510, y: 60},
+                    {x: 620, y: -60},
+                    {x: 500, y: -100},
+                    {x: 380, y: 20},
+                    {x: 500, y: 60},
+                    {x: 580, y: 20},
+                    {x: 620, y: 15}
+                ]
+            },
+            leave: {
+                curviness: 1.25,
+                autoRotate: false,
+                values: [
+                    {x: 660, y: 20},
+                    {x: 800, y: 130},
+                    {x: $(window).width() + 0, y: -10},
+                ]
+            }
+        };
+        // init controller
+        var controller = new ScrollMagic();
+
+        // create tween
+        var tween = new TimelineMax()
+                .add(TweenMax.to($("#plane"), 1.2, {css: {bezier: flightpath.entry}, ease: Power1.easeInOut}))
+                .add(TweenMax.to($("#plane"), 2, {css: {bezier: flightpath.looping}, ease: Power1.easeInOut}))
+                .add(TweenMax.to($("#plane"), 1, {css: {bezier: flightpath.leave}, ease: Power1.easeInOut}));
+
+        // build scene
+        var eagle = new ScrollScene({triggerElement: "#trigger", duration: 900, offset: 100})
+                .setPin("#target")
+                .setTween(tween)
+                .addTo(controller);
+
+        var row3 = new ScrollScene({})
+                .addTo(controller);
+
+        var row4 = new ScrollScene({})
+                .addTo(controller);
+
+        var row5 = new ScrollScene({})
+                .addTo(controller);
+
+
+    });
+</script>

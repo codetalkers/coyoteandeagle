@@ -59,8 +59,9 @@ RailsAdmin.config do |config|
       field :email
       field :phone
       field :website
+      field :thumbnail
       field :twitter
-      field :tribe
+      field :tribe_name
     end
     show do
       field :name
@@ -68,8 +69,9 @@ RailsAdmin.config do |config|
       field :email
       field :phone
       field :website
+      field :thumbnail
       field :twitter
-      field :tribe
+      field :tribe_name
     end
   end
 
@@ -136,7 +138,7 @@ RailsAdmin.config do |config|
     parent Question
     list do
       sort_by :question, :id
-      field :name
+      field :answer
       field :question
       field :person
       field :group

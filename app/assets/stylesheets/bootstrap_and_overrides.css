@@ -1,0 +1,24 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+.row-fluid {
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.col-md-12 {
+    padding:0;
+}
+
+.caption {
+    background-color: rgba(211, 211, 211, 0.50);
+    overflow:hidden;
+}

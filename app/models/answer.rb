@@ -9,5 +9,7 @@ class Answer < ActiveRecord::Base
   has_many :answer_audios
   has_many :audios, :through => :answer_audios
 
+  scope :beginning_answers, -> { where('group_id = 1') }
+
 
 end

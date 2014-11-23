@@ -10,10 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require foundation
-//= require turbolinks
+
+//= require _dependent/jquery.min
+//= require _dependent/greensock/TweenMax.min
+//= require _examples/general
+//= require _examples/highlight.pack
+//= require _examples/modernizr.custom.min
+//= require jquery.scrollmagic.min
+//= require jquery.scrollmagic.debug
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+

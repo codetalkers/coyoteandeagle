@@ -1,0 +1,1367 @@
+/*
+	General styles
+*/
+body {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    background-color: #fff;
+    font-size: 14px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body, html {
+    height: 100%
+}
+
+h1, h2, h3, h4 {
+    font-family: "Josefin Slab", serif;
+}
+h1 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 40px;
+}
+h2 {
+    font-size: 20px;
+}
+a, a:visited {
+    text-decoration: none;
+    color: #2e639e;
+}
+a:hover {
+    text-decoration: underline;
+}
+.touchonly {
+    display: none;
+}
+html.touch .touchonly {
+    display: block;
+}
+.noselect * {
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+.doselect * {
+    user-select: auto;
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -o-user-select: auto;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+#github-ribbon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+#msg {
+    line-height: 13px;
+    position: fixed;
+    width: 260px;
+    height: 28px;
+    padding-top: 12px;
+    left: 50%;
+    margin-left: -130px;
+    bottom: 0px;
+    text-align: center;
+    z-index: 500;
+    background-color: #2e639e;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+#msg div {
+    display: inline-block;
+}
+#msg .word {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+#msg a {
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+#msg a:hover {
+    text-decoration: none;
+}
+#msg a:hover .word {
+    text-decoration: underline;
+}
+#msg img {
+    vertical-align: bottom;
+}
+#msg div.scroll {
+    width: 12px;
+    height: 13px;
+    vertical-align: bottom;
+    background-image: url("demo_arrow_scroll.png");
+}
+iframe.twitter-follow-button {
+    vertical-align: text-bottom;
+    margin: auto auto -1px 8px;
+}
+div#content-wrapper {
+    height: 100%;
+    min-width: 900px;
+    min-height: 500px;
+}
+html.touch div#content-wrapper {
+    min-width: 700px;
+}
+.scrollContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-width: 650px;
+    width: 100%
+}
+.scrollContent {
+    position: relative;
+    /*height: 100%;*/
+}
+section {
+    height: 100vh;
+}
+
+section#start {
+
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.spark {
+    position: absolute;
+}
+.spark.s0 {
+    background-image: url("demo_spark1.png");
+    width: 4px;
+    height: 3px;
+}
+.spark.s1 {
+    background-image: url("demo_spark2.png");
+    width: 6px;
+    height: 6px;
+}
+.spark.s2 {
+    background-image: url("demo_spark3.png");
+    width: 8px;
+    height: 8px;
+}
+.spark.s3 {
+    background-image: url("demo_spark4.png");
+    width: 11px;
+    height: 11px;
+}
+.spark.s4 {
+    background-image: url("demo_spark5.png");
+    width: 13px;
+    height: 13px;
+}
+.spark.s5 {
+    background-image: url("demo_spark6.png");
+    width: 17px;
+    height: 17px;
+}
+.wand {
+    position: absolute;
+}
+.sparkpoint {
+    position: absolute;
+}
+
+/*START*/
+
+
+#intro {
+    display: block;
+    width: 650px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin: -200px auto auto -325px;
+    position: absolute;
+}
+#intro h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 135px;
+    margin: 0;
+}
+#intro h1 span {
+    position: relative;
+}
+#intro .tophat {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    margin-left: -144px;
+}
+#intro .floor {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -305px;
+}
+#intro .sparkpoint {
+    top: 60px;
+    left: 380px;
+}
+
+#tweens {
+    height: auto;
+    overflow: hidden;
+}
+
+#tweens h3 {
+    text-align: center;
+    font-size: 80px;
+    margin: 0 auto 200px auto;
+    position: relative;
+}
+#pin {
+    width: 100%;
+    overflow: hidden;
+}
+#pin h3 {
+    font-size: 80px;
+    text-align: center;
+    margin: -40px 0 0 0;
+    position: relative;
+    top: 50%;
+    line-height: 80px;
+}
+#pin #draw {
+    width: 500px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -250px;
+    position: absolute;
+
+}
+#pin #draw path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 5;
+}
+#pin #wipe {
+    height: 100%;
+    width: 0%;
+    top: 0;
+    position: absolute;
+    background-color: #2e639e;
+    overflow: hidden;
+}
+#pin #wipe h3 {
+    color: #FFFFFF;
+}
+#pin #slide {
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    position: absolute;
+    background-color: #c7e1ff;
+}
+#pin #slide h3 {
+    position: absolute;
+    width: 100%;
+}
+#pin h3#unpin {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%
+}
+
+#parallax {
+    margin-bottom: 250px;
+    position: relative;
+    overflow: hidden;
+}
+#parallax h3 {
+    font-size: 80px;
+    text-align: center;
+    margin: -40px 0 0 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    line-height: 80px;
+}
+#parallax #parallaxbg {
+    position: absolute;
+    height: 300px;
+    top: 50%;
+    width: 100%;
+    margin-top: -150px;
+    background-image: url("demo_parallax_bg.png");
+}
+#parallaxbg .top {
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url("demo_parallax_shadow_top.png");
+}
+#parallaxbg .bottom {
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: url("demo_parallax_shadow_bottom.png");
+}
+
+#info {
+    height: auto;
+    padding-bottom: 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#info h1 {
+    margin-bottom: 10px;
+}
+#info h2 {
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+}
+#info h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#info h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+#info .content {
+    width: 645px;
+    text-align: left;
+    display: inline-block;
+}
+#info .darkside {
+    margin-top: 10px;
+}
+#info #sublinecover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #c7e1ff;
+    left: 0;
+    top: 0;
+}
+#info #hatcontainer {
+    width: 140px;
+    height: 200px;
+    position: relative;
+    float: left;
+}
+
+#info #hatcontainer .hat {
+    position: absolute;
+    bottom: 10px;
+}
+#info #hatcontainer #bunny {
+    position: absolute;
+    bottom: 67px;
+    left: 23px;
+}
+#info #hatcontainer #bunny .eye {
+    position: absolute;
+    top: 6px;
+    left: 30px;
+    display: none;
+}
+#info #hatcontainer #speechbubble {
+    position: absolute;
+    width: 165px;
+    height: 103px;
+    background-image: url("demo_bubble.png");
+    left: -118px;
+    top: -24px;
+}
+#info ul.nexttohat {
+    padding-left: 158px;
+}
+#speechbubble p {
+    margin: 0;
+    text-align: center;
+    line-height: 22px;
+    color: #2e639e;
+}
+#speechbubble p:first-child {
+    font-size: 24px;
+    margin-top: 23px;
+}
+#speechbubble p:last-child {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+a:hover #speechbubble p:last-child {
+    text-decoration: underline;
+}
+#madewith {
+    margin-right: -15px;
+    margin-bottom: -15px;
+}
+#madewith a {
+    display: inline-block;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    float: left;
+}
+#madewith a img {
+    width: 100%;
+    height: 100%;
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: width, height, margin;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    /* Standard syntax */
+    transition-property: width, height, margin;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+}
+#madewith a::after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    border: 4px solid white;
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: top, bottom, left, right;
+    -webkit-transition-duration: 0.15s;
+    -webkit-transition-timing-function: linear;
+    /* Standard syntax */
+    transition-property: top, bottom, left, right;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+}
+#madewith a:hover img {
+    width: 110%;
+    height: 110%;
+    margin-left: -5%;
+    margin-top: -5%;
+}
+#madewith a:hover::after{
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+html.touch body {
+    font-size: 25px;
+}
+html.touch #info #hatcontainer {
+    margin-bottom: 260px;
+    height: 300px;
+    width: 240px;
+}
+html.touch #info #hatcontainer .hat {
+    left: 90px;
+}
+html.touch #info #hatcontainer #bunny {
+    left: 110px;
+}
+html.touch #info #hatcontainer #speechbubble {
+    left: -20px;
+    top: 35px;
+}
+html.touch #info ul.nexttohat {
+    padding-left: 240px;
+}
+
+/*
+	Containers
+*/
+#content-wrapper, #wrapper {
+    height: 100%;
+}
+.scrollContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%
+}
+.scrollContainer {
+    height: 100%;
+    margin: auto;
+}
+#wrapper .scrollContent {
+    height: 100%;
+}
+
+.horizontal.scrollContainer {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+#wrapper.scrollContainer .scrollContent {
+    width: 100%;
+    height: auto;
+}
+#wrapper.scrollContainer.horizontal .scrollContent {
+    width: auto;
+    height: 100%;
+}
+#wrapper.horizontal {
+    white-space: nowrap;
+    font-size: 0;  /* fix for spaces between inline block divs */
+}
+#wrapper.horizontal div {
+    font-size: 13px;
+}
+#wrapper .scrollContent, #wrapper.horizontal .scrollContent {
+    font-size: 0;
+}
+#wrapper .scrollContent div {
+    font-size: 13px;
+}
+#wrapper section {
+    width:70%;
+    text-align: center;
+}
+
+
+/*
+	Elements
+*/
+.spacer {
+    text-align: center;
+    min-height: 100px;
+    background-image: url("example_bg_spacer_v.gif");
+}
+.spacer.s0 {
+    min-height: 1px;
+}
+.spacer.s1 {
+    min-height: 100px;
+}
+.spacer.s2 {
+    min-height: 200px;
+}
+.spacer.s3 {
+    min-height: 300px;
+}
+.spacer.s4 {
+    min-height: 400px;
+}
+.spacer.s5 {
+    min-height: 500px;
+}
+.spacer.s6 {
+    min-height: 600px;
+}
+.spacer.s7 {
+    min-height: 700px;
+}
+.spacer.s8 {
+    min-height: 800px;
+}
+.spacer.s9 {
+    min-height: 900px;
+}
+.spacer.s10 {
+    min-height: 1000px;
+}
+.spacer.s_viewport {
+    min-height: 100%;
+}
+.horizontal .spacer {
+    background-image: url("example_bg_spacer_h.gif");
+    margin-bottom: 0;
+    min-height: initial;
+    min-width: 100px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.horizontal .spacer.s0 {
+    min-width: 1px;
+}
+.horizontal .spacer.s1 {
+    min-width: 100px;
+}
+.horizontal .spacer.s2 {
+    min-width: 200px;
+}
+.horizontal .spacer.s3 {
+    min-width: 300px;
+}
+.horizontal .spacer.s4 {
+    min-width: 400px;
+}
+.horizontal .spacer.s5 {
+    min-width: 500px;
+}
+.horizontal .spacer.s6 {
+    min-width: 600px;
+}
+.horizontal .spacer.s7 {
+    min-width: 700px;
+}
+.horizontal .spacer.s8 {
+    min-width: 800px;
+}
+.horizontal .spacer.s9 {
+    min-width: 900px;
+}
+.horizontal .spacer.s10 {
+    min-width: 1000px;
+}
+.spacer.s_viewport {
+    min-width: 100%;
+}
+
+.box1, .box2, .box3 {
+    display: inline-block;
+    position: relative;
+    border-radius: 8px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+.box1 {
+    min-width: 100px;
+    height: 100px;
+    margin: 0 auto 0 auto;
+}
+.box2 {
+    min-width: 50px;
+    height: 50px;
+    margin: 25px auto 25px auto;
+}
+.box3 {
+    min-width: 26px;
+    height: 26px;
+    margin: 37px auto 37px auto;
+}
+.horizontal .box1 {
+    top: 50%;
+    max-height: 100px;
+    margin: -50px 0 auto 0;
+}
+.horizontal .box2 {
+    top: 50%;
+    max-height: 50px;
+    margin: -25px 25px auto 25px;
+}
+.horizontal .box3 {
+    top: 50%;
+    max-height: 26px;
+    margin: -13px 37px auto 37px;
+}
+.box1 p, .box2 p, .box3 p {
+    margin: 5px 15px 5px 15px;
+    font-size: 13px;
+    font-weight: lighter;
+    color: white;
+}
+.box1 p:first-child {
+    margin-top: 27px;
+}
+.box1 a, .box2 a, .box3 a {
+    color: white;
+}
+.box1.white *, .box2.white *, .box3.white * {
+    color: #2e639e;
+}
+.box2.mario {
+    background-color: #004fae;
+    border-top: 30px solid #fc112f;
+    border-bottom: 10px solid #c4723b;
+}
+.box3.goomba {
+    min-width: 30px;
+    height: 4px;
+    margin-top: 75px;
+    margin-left: 30px;
+    margin-bottom: 25px;
+    background-color: #b39475;
+    border-top: 30px solid #744527;
+    border-bottom: 6px solid #c4723b;
+}
+/*
+	colors
+*/
+
+.box1.outline, .box2.outline, .box3.outline {
+    border: 1px solid white;
+}
+.blue {
+    background-color: #3883d8;
+}
+.skin {
+    background-color: #ED9F4C;
+}
+.black {
+    background-color: #000000;
+}
+.white {
+    background-color: #FFFFFF;
+}
+.red {
+    background-color: #cf3535;
+}
+.green {
+    background-color: #00af10;
+}
+.orange {
+    background-color: #ea6300;
+}
+/*
+	Form
+*/
+form.move {
+    text-align: left;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    display: block;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    padding: 20px;
+    z-index: 20;
+}
+form > div, form > fieldset > div {
+    margin: 10px 0 10px 0;
+    display: block;
+}
+form .slider {
+    min-width: 199px;
+    display: inline-block;
+    position: relative;
+    height: 9px;
+    border-right: 1px solid #2e639e;
+    border-left: 1px solid #2e639e;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+form .slider .trackbar {
+    margin-top: 4px;
+    border-top: 1px solid #2e639e;
+    height: 4px;
+}
+form .slider .handle {
+    height: 14px;
+    width: 6px;
+    position: absolute;
+    top: -4px;
+    margin-left: -4px;
+    left: 0%;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #2e639e;
+}
+form .slider .handle:hover, form .slider.dragging .handle {
+    background-color: #79b0ee;
+}
+form .slider + input {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+form #options label, form #actions label, form #tweenparams label {
+    min-width: 90px;
+    text-align: right;
+    display: inline-block;
+    margin-right: 10px;
+}
+form #tweenparams label {
+    min-width: 50px;
+}
+form #options button {
+    width: 65px;
+}
+form fieldset {
+    padding: 0 10px 0 10px;
+    margin: 5px 0 0 0;
+}
+form fieldset:first-child {
+    margin-top: -5px;
+}
+form fieldset legend {
+    padding: 0 5px 0 5px;
+    margin: 0;
+}
+
+.move {
+    cursor: move;
+}
+.move * {
+    cursor: auto;
+}
+.move label {
+    cursor: default;
+}
+
+/*
+	MENU
+*/
+
+ul#menu, ul#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul#menu {
+    position: fixed;
+    z-index: 999;
+    width: 500px;
+    left: 50%;
+    margin: 10px auto auto -250px;
+    text-align: center;
+}
+
+#titlechart ul#menu {
+    margin-top: 40px;
+    position: static;
+    z-index: inherit;
+    width: auto;
+    left: auto;
+    margin: 40px auto auto auto;
+}
+ul#menu > li {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    position: relative;
+    min-height: 30px;
+    border-radius: 4px;
+    background-color: #79b0ee;
+    vertical-align: top;
+    min-width: 152px;
+}
+ul#menu li a {
+    padding: 0 5px 0 5px;
+    display: block;
+    text-decoration: none;
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 15px;
+}
+ul#menu ul {
+    display: none;
+}
+
+ul#menu li:hover > a {
+    color: #2e639e;
+}
+html.touch ul#menu li:hover > a {
+    color: white;
+}
+html.touch ul#menu li:hover ul {
+    display: none;
+}
+ul#menu li:hover ul, html.touch ul#menu li.open ul {
+    display: block;
+    width: 100%;
+    padding: 5px 0 5px 0;
+    border-top: 1px dashed white;
+}
+ul#menu ul li a {
+    text-transform: none;
+    font-size: 11px;
+    line-height: 20px;
+    font-weight: lighter;
+    color: #133f71;
+}
+ul#menu ul li a:hover {
+    background-color: #3883d8;
+    color: white;
+}
+
+.menuwrap {
+    position: fixed;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    min-height: 51px;
+    top: -51px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 998;
+    text-align: center;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s; /* Safari */
+    transition-delay: 1s;
+    -webkit-transition-delay: 1s; /* Safari */
+}
+.menuwrap:hover, .menuwrap.open {
+    top: 0px;
+    transition-delay: 0s;
+    -webkit-transition-delay: 0s; /* Safari */
+}
+.menuwrap ul#menu {
+    position: absolute;
+}
+.menuwrap div.flag {
+    top: 51px;
+    position: absolute;
+    width: 60px;
+    left: inherit;
+    left: 50%;
+    color: #2e639e;
+    margin-left: -30px;
+    background-color: inherit;
+    line-height: 20px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s; /* Safari */
+    transition-delay: 1.5s;
+    -webkit-transition-delay: 1.5s; /* Safari */
+}
+.menuwrap:hover div.flag, .menuwrap.open div.flag {
+    opacity: 0;
+    top: -20px;
+    transition: top 0.1s;
+    -webkit-transition: top 0.1s; /* Safari */
+    transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s; /* Safari */
+}
+html.touch .menuwrap.open div.flag {
+    top: -50px;
+}
+html.touch .menuwrap div.flag {
+    width: 100px;
+    margin-left: -50px;
+    font-size: 25px;
+    line-height: 50px;
+}
+html.touch .menuwrap div.flag {
+    /*opacity: 1;
+    top: 51px;*/
+}
+/*
+	Codecontainer
+*/
+#codecontainer {
+    position: fixed;
+    top: 30px;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 900;
+    min-height: 300px;
+}
+#codecontainer pre {
+    margin: 0;
+    padding: 0;
+    line-height: 16px;
+    tab-size: 4;
+}
+#codecontainer pre .break {
+    background-color: #F6F6F6;
+    font-weight: bold;
+    color: #aaa;
+}
+#codecontainer pre .break:before {
+    content: "᎒"
+}
+#codecontainer .codewrap {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    overflow: scroll;
+    white-space: nowrap;
+}
+#codecontainer .code, #codecontainer .linenumbers {
+    min-height: 100%;
+}
+#codecontainer .code {
+    padding: 0;
+    display: inline-block;
+}
+#codecontainer .code {
+    padding: 0 15px 10px 5px;
+}
+#codecontainer .linenumbers {
+    float: left;
+    padding: 0px 5px 0px 10px;
+    color: #aaa;
+    text-align: right;
+    border-right: 1px solid #e5e5e5;
+}
+#codecontainer span.indent {
+    width: 31px;
+    display: inline-block;
+    white-space: nowrap;
+}
+#codecontainer #close.button {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+#codecontainer #select.button {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    height: 20px;
+    padding: 0 10px 0 10px;
+}
+#codecontainer #close.button:after {
+    content: "྾";
+}
+#codecontainer .button {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    cursor: pointer;
+    color: #2e639e;
+}
+#codecontainer .button:hover {
+    background-color: #3883d8;
+    color: white;
+}
+
+/*
+	OTHER
+*/
+a.viewsource:after {
+    content: " }";
+}
+a.viewsource:before {
+    content: "{ ";
+}
+
+#parallaxContainer {
+    width: 900px;
+    height: 500px;
+    top: 30px;
+    position: relative;
+}
+#parallaxContainer .layer1 {
+    height: 100%;
+    text-align: center;
+    background-image: url("example_parallax_l1.gif");
+}
+#parallaxContainer .layer2 {
+    background-image: url("example_parallax_l2.png");
+    position: absolute;
+    height: 139px;
+    width: 100%;
+    bottom: 32px
+}
+#parallaxContainer .layer3 {
+    background-image: url("example_parallax_l3.gif");
+    position: absolute;
+    height: 32px;
+    width: 100%;
+    bottom: 0px;
+}
+#parallaxText {
+    width: 0;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+#parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3 {
+    position: absolute;
+    font-size: 50px;
+    line-height: 50px;
+    margin-left: -150px;
+    margin-top: -25px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #133f71;
+}
+#parallaxText .layer1 {
+    top: 48%;
+}
+#parallaxText .layer2 {
+    top: 49%;
+}
+#parallaxText .layer3 a {
+    display: block;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+#parallax1, #parallax2, #parallax3 {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+#parallax1 > div, #parallax2 > div, #parallax3 > div {
+    position: relative;
+    height: 200%;
+    -webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000;
+}
+
+.dynamicContent #content {
+    width: 480px;
+    margin: auto;
+    text-align: left;
+}
+.dynamicContent #content .box1 {
+    margin: 10px;
+}
+
+.dynamicContent #loader {
+    height: 0;
+    overflow: hidden;
+    line-height: 60px;
+}
+.dynamicContent #loader.active {
+    height: 60px;
+}
+.dynamicContent #loader img {
+    vertical-align: text-bottom;
+}
+
+#customactions {
+    height: 160px;
+    width: 170px;
+    margin: auto;
+    padding-top: 40px;
+    text-align: left;
+}
+#customactions label {
+    width: 100px;
+    display: inline-block;
+}
+#customactions code {
+    color: #3883d8;
+}
+#customactions a.viewsource {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+.demo.responsiveDuration {
+    position: relative;
+}
+.responsiveDuration .box1 {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+#destroybox a {
+    display: block;
+    margin-top: 20px;
+}
+#destroybox a.disabled {
+    color: #79b0ee;
+}
+#mobileadvanced {
+    width: 150px;
+    height: 150px;
+}
+#mobileadvanced p {
+    margin-top: 50px;
+}
+#multiDirect {
+    text-align: left;
+}
+#multiDirect .box1 {
+    margin: 200px auto auto 200px;
+}
+#multiDirect .box1 p:first-child {
+    margin-top: 20px;
+}
+
+#imagesequence {
+    height: 300px;
+}
+
+.copyright {
+    font-variant: italic;
+    font-size: 11px;
+}
+
+#bezier {
+    overflow: hidden;
+    position: relative;
+}
+#bezier #plane {
+    position: absolute;
+    left: -100px;
+}
+#bezier a.viewsource {
+    margin: 100px;
+    display: inline-block;
+}
+
+/*
+
+Codehighlighting
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+    display: block; padding: 0.5em;
+    color: #333;
+    /*background: #f8f8f8*/
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+    color: #998;
+    font-style: italic
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+    color: #333;
+    font-weight: bold
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+    color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+    color: #d14
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+    color: #900;
+    font-weight: bold
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+    font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+    color: #458;
+    font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+    color: #000080;
+    font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+    color: #008080
+}
+
+.hljs-regexp {
+    color: #009926
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+    color: #990073
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+    color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+    color: #999;
+    font-weight: bold
+}
+
+.hljs-deletion {
+    background: #fdd
+}
+
+.hljs-addition {
+    background: #dfd
+}
+
+.diff .hljs-change {
+    background: #0086b3
+}
+
+.hljs-chunk {
+    color: #aaa
+}
