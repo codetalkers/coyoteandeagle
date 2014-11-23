@@ -10,6 +10,8 @@ class Answer < ActiveRecord::Base
   has_many :audios, :through => :answer_audios
 
   scope :beginning_answers, -> { where('group_id = 1') }
+  scope :intermediate_answers, -> { where('group_id = 2') }
+  scope :advanced_answers, -> { where('group_id = 3') }
 
 
 end

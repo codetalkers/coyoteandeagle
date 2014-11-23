@@ -22,3 +22,25 @@
     background-color: rgba(211, 211, 211, 0.50);
     overflow:hidden;
 }
+
+.video-section .pattern-overlay {
+    background-color: rgba(71, 71, 71, 0.40);
+    padding: 10px 0 32px;
+    min-height: 800px;
+    /* Incase of overlay problems just increase the min-height*/
+}
+
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+.blue {
+    background-color: #9ed5fd;
+}
+
+.brown {
+    background-color: #FBB14C;
+}
+
+.orange {
+    background-color: #fbb14c;
+}

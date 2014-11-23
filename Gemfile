@@ -34,6 +34,8 @@ gem 'mysql2'
 gem 'rails_admin'
 gem 'cancan'
 gem 'devise'
+gem 'simple_oauth', '< 0.3.0'
+gem 'twitter'
 gem 'twitter-bootstrap-rails'
 gem 'rails_12factor', group: :production
 

@@ -5,7 +5,7 @@
     </div>
   </div>
 </div>
-<div id='row2' class="container-fluid" style="height:400px;background-image:url('/assets/hair-accessories2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+<div id='row2' class="container-fluid" style="height:440px;background-image:url('/assets/hair-accessories2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
   <div class="row-fluid">
     <div class="col-md-8 col-md-offset-2" style="height:400px;">
       <div id="trigger"></div>
@@ -16,85 +16,235 @@
         <h1 class="text-center">Stories of Language Preservation</h1>
 
         <h3>
-          In the beginning there was a Coyote and an Eagle, the old coyote was a trickster who was native to the urban
-          area, and the wise Eagle was from the rural reservation. Together they created this story telling platform
-          to learn, preserve, interact and share our diverse Native languages and cultures.
+          In the beginning there was a Coyote and an Eagle. The old coyote was a trickster who was native to the urban
+          area, while the wise Eagle was from the rural reservation. Together they created this story-telling platform
+          to learn, preserve, interact and share our diverse Native languages and cultures. The conversation started
+          with a hello.
         </h3>
+
+        <div style="text-align:center;">
+          <audio controls style="width:400px;margin-top:10px;margin: 0 auto;">
+            <source src="/assets/hellos.mp3" type="audio/mpeg">
+            <p>Your browser does not support the audio element.</p>
+          </audio>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div id='row3' class="container-fluid" style="height:600px;background-image:url('/assets/haircut-2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+<div id='row3' class="container-fluid" style="height:550px;background-image:url('/assets/haircut-2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
   <div class="row-fluid">
     <div class="col-md-12" style="padding:0;">
-      <h1 class="text-center" style="color:#fff;font-size:45px;">They were taught in boarding schools<br/>to try and forget their language...</h1>
+      <h1 class="text-center" style="color:#fff;font-size:45px;margin-bottom:60px;">They were taught in boarding schools<br/>to
+        forget
+        their language...</h1>
       <% @beginning_answers.each do |ba| %>
-      <div class="col-md-2 caption" style="height:226px;">
-        <img src="<%= ba.person.thumbnail %>" style="float:right;"/><br/><div style='font-size:20px;color:#000;float:right;'><%= ba.person.name %><br/><%= ba.person.tribe_name %></div>
-      </div>
-      <div class="col-md-2 caption" style="height:226px;">
-        <blockquote><h3 style="font-size:100%;color:#000;"><%= ba.answer %></h3>
-        <audio controls style="width:110%;margin-top:10px;">
-          <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
+          <div class="col-md-4" style="height:226px;">
+            <table class="table caption">
+              <tr>
+                <td>
+                  <img src="<%= ba.person.thumbnail %>" style="width:150px;height:150px;"/>
+
+                  <div style='font-size:20px;color:#000;text-align:center;'>
+                    <%= ba.person.name %><br/>
+                    <%= ba.person.tribe_name %>
+                  </div>
+                </td>
+                <td>
+                  <blockquote><h3 style="font-size:100%;color:#000;"><%= ba.answer %></h3>
+                    <audio controls style="width:110%;margin-top:10px;">
+                      <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                  </blockquote>
+                </td>
+              </tr>
+            </table>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div id='row4' class="container-fluid" style="height:400px;background-color:#000;background-size: 100% auto;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h1 class="text-center" style="color:#fff;font-size:45px;margin-left:200px;margin-right:200px;text-shadow: 2px 2px #333333;">
+        Coyote begins his path by looking for Eagle to learn more about his language and culture.
+        <audio controls style="width:300px;margin-top:10px;">
+          <source src="/assets/coyote howl.mp3" type="audio/mpeg">
           <p>Your browser does not support the audio element.</p>
         </audio>
-        </blockquote>
+      </h1>
+
+      <div style="padding-top:120px;">
+        <video width="100%" autoplay loop preload>
+          <source src="/assets/coyote.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <% end %>
-      <% @beginning_answers.each do |ba| %>
-          <div class="col-md-2 caption" style="height:226px;">
-            <img src="<%= ba.person.thumbnail %>" style="float:right;"/><br/><div style='font-size:20px;color:#000;float:right;'><%= ba.person.name %><br/><%= ba.person.tribe_name %></div>
-          </div>
-          <div class="col-md-2 caption" style="height:226px;">
-            <blockquote><h3 style="font-size:100%;color:#000;"><%= ba.answer %></h3>
-              <audio controls style="width:110%;margin-top:10px;">
-                <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
-                <p>Your browser does not support the audio element.</p>
-              </audio>
-            </blockquote>
-          </div>
-      <% end %>
-      <% @beginning_answers.each do |ba| %>
-          <div class="col-md-2 caption" style="height:226px;">
-            <img src="<%= ba.person.thumbnail %>" style="float:right;"/><br/><div style='font-size:20px;color:#000;float:right;'><%= ba.person.name %><br/><%= ba.person.tribe_name %></div>
-          </div>
-          <div class="col-md-2 caption" style="height:226px;">
-            <blockquote><h3 style="font-size:100%;color:#000;font-weight:800;"><%= ba.answer %></h3>
-              <audio controls style="width:110%;margin-top:10px;">
-                <source src="<%= ba.audios.first.path %>" type="audio/mpeg">
-                <p>Your browser does not support the audio element.</p>
-              </audio>
-            </blockquote>
+    </div>
+  </div>
+</div>
+<div id='row5' class="container-fluid" style="height:500px;background-color:#ccc;background-image:url('/assets/ras-feet.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+  <div class="row-fluid">
+    <div class="col-md-12" style="padding:0;">
+      <h1 class="text-center caption" style="color:#000;font-size:45px;margin-bottom:60px;margin-left:200px;margin-right:200px;">I've
+        never actually heard my language spoken more than a word or two until my 30's or 40's.</h1>
+      <% @intermediate_answers.each do |ia| %>
+          <div class="col-md-4" style="height:226px;">
+            <table class="table caption">
+              <tr>
+                <td>
+                  <img src="<%= ia.person.thumbnail %>" style="width:150px;height:150px;"/>
+
+                  <div style='font-size:20px;color:#000;text-align:center;'>
+                    <%= ia.person.name %><br/>
+                    <%= ia.person.tribe_name %>
+                  </div>
+                </td>
+                <td>
+                  <blockquote><h3 style="font-size:100%;color:#000;"><%= ia.answer %></h3>
+                    <audio controls style="width:110%;margin-top:10px;">
+                      <source src="<%= ia.audios.first.path %>" type="audio/mpeg">
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                  </blockquote>
+                </td>
+              </tr>
+            </table>
           </div>
       <% end %>
     </div>
   </div>
 </div>
-<div id='row4' class="container-fluid" style="height:400px;background-color:#ccc;background-image:url('/assets/ledger.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+<div id='row6' class="container-fluid" style="height:360px;background-color:#9ed5fd;">
   <div class="row-fluid">
     <div class="col-md-12" style="padding:0;">
-      <h1 class="text-center">Intermediate</h1>
+      <h1 class="text-center" style="color:#fff;font-size:45px;margin-left:200px;margin-right:200px;text-shadow: 2px 2px #000000;">Friend,
+        we have so much to learn from each others paths.
+      </h1>
     </div>
   </div>
 </div>
-<div id='row5' class="container-fluid" style="height:400px;background-color:#fff;background-image:url('');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+
+<div id='row7' class="container-fluid" style="height:500px;background-color:#dcdcdc;background-image:url('/assets/road-2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
   <div class="row-fluid">
     <div class="col-md-12" style="padding:0;">
-      <h1 class="text-center">Advanced</h1>
+      <h1 class="text-center" style="color:#000;font-size:45px;margin-bottom:60px;margin-left:200px;margin-right:200px;">Language
+        is a vital key part of who we are as Native Americans.</h1>
+      <% @advanced_answers.each do |aa| %>
+          <div class="col-md-4" style="height:226px;">
+            <table class="table caption">
+              <tr>
+                <td>
+                  <img src="<%= aa.person.thumbnail %>" style="width:150px;height:150px;"/>
+
+                  <div style='font-size:20px;color:#000;text-align:center;'>
+                    <%= aa.person.name %><br/>
+                    <%= aa.person.tribe_name %>
+                  </div>
+                </td>
+                <td>
+                  <blockquote><h3 style="font-size:100%;color:#000;"><%= aa.answer %></h3>
+                    <audio controls style="width:110%;margin-top:10px;">
+                      <source src="<%= aa.audios.first.path %>" type="audio/mpeg">
+                      <p>Your browser does not support the audio element.</p>
+                    </audio>
+                  </blockquote>
+                </td>
+              </tr>
+            </table>
+          </div>
+      <% end %>
     </div>
   </div>
 </div>
-<div id='row5' class="container-fluid" style="height:700px;background-color:#dcdcdc;background-image:url('/assets/road-2.png');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
+<div id='row7' class="container-fluid" style="height:400px;background-color:#9ed5fd;">
   <div class="row-fluid">
     <div class="col-md-12" style="padding:0;">
-      <h1 class="text-center">Interaction</h1>
+      <h1 class="text-center" style="color:#fff;font-size:45px;margin-left:200px;margin-right:200px;text-shadow: 2px 2px #000000;">Eagle
+        continues his story-telling path by leaving this platform open
+        to contributions.
+        <br/>
+        <audio controls style="width:300px;margin-top:10px;">
+          <source src="/assets/eagle call.mp3" type="audio/mpeg">
+          <p>Your browser does not support the audio element.</p>
+        </audio>
+      </h1>
+
+      <div>
+        <video width="100%" autoplay loop preload>
+          <source src="/assets/eagle.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+<div id='row8' class="container-fluid" style="padding:0;">
+  <div class="row-fluid">
+    <div class="col-md-12 content-section video-section" style="padding:0;height:800px;">
+      <div class="pattern-overlay">
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=GMu-ODBSzDU',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+
+        <h1 class="text-center">Interaction</h1>
+
+        <h3 class="text-center">
+          <a href="https://twitter.com/intent/tweet?button_hashtag=CoyoteAndEagle&text=My%20language%20story%20is%20about">Share
+            your experience</a></h3>
+
+        <div class="col-md-4 col-md-offset-2">
+          <h3 class="text-center">
+            <img src="/assets/tribeca_ndn.jpg" style="height:400px;"/>
+          </h3>
+        </div>
+        <div class="col-md-4">
+          <h3 class="text-left">
+            <b>Coyote and Eagle</b><br/>
+            http://www.coyoteandeagle.com<br/><br/>
+            Members<br/>
+            Ras K'dee<br/>
+            Leo Vicenti<br/>
+            Dwayne Joe<br/>
+            Feather Metsch<br/>
+            Paul Beccio<br/>
+            <br/>
+            Github<br/>
+            https://github.com/whistlepost/coyoteandeagle
+          </h3>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <div id='footer' class="container-fluid" style="height:150px;background-color:#000;background-image:url('');background-repeat: no-repeat;background-size: 100% auto;background-position: center top;background-attachment: fixed;">
   <div class="row-fluid">
     <div class="col-md-12" style="padding:0;">
-      <h3 style="padding-left:20px;">coyote & eagle dot com</h3>
+      <h3 style="padding-left:20px;">coyote & eagle dot com<br/>
+        <a class="twitter-hashtag-button"
+           href="https://twitter.com/intent/tweet?button_hashtag=CoyoteAndEagle&text=My%20language%20story%20is%20about"
+           data-related="twitter">
+          Tweet #CoyoteAndEagle
+        </a>
+        <script type="text/javascript">
+            window.twttr = (function (d, s, id) {
+                var t, js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+                return window.twttr || (t = {
+                            _e: [], ready: function (f) {
+                                t._e.push(f)
+                            }
+                        })
+            }(document, "script", "twitter-wjs"));
+        </script>
+      </h3>
+
     </div>
   </div>
 </div>
@@ -159,6 +309,11 @@
         var row5 = new ScrollScene({})
                 .addTo(controller);
 
+
+    });
+    $(document).ready(function () {
+
+        $(".player").mb_YTPlayer();
 
     });
 </script>
