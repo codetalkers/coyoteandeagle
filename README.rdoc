@@ -1,5 +1,5 @@
 == Coyote and Eagle
-https://github.com/whistlepost/coyoteandeagle
+=== This app was one of the projects during the Tribec4H4cks NDN Country Hackathon in Nov 2014 at the IAIA Institute in Sante Fe, New Mexico. 
 
 Technologies used:
 
