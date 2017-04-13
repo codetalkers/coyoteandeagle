@@ -1,7 +1,12 @@
 == Coyote and Eagle
 === This app was one of the projects during the Tribec4H4cks NDN Country Hackathon in Nov 2014 at the IAIA Institute in Sante Fe, New Mexico. 
 
-Technologies used:
+This repo is dated, but we hope to bring it back and continue building out software that will encourage language preservation.
+
+Some future enhancements including creating tribal profiles, uploading .mp3s, submitting and sharing stories. There’s a lot of potential. We hope you would like to fork and contribute.
+
+
+Technologies used during the Hackathon:
 
 * Ruby on Rails version 4.1
 
