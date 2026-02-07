@@ -1,0 +1,149 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// -- Enums --
+
+enum Role {
+  READONLY
+  READWRITE
+  ADMIN
+}
+
+// -- Models --
+
+model User {
+  id                  Int       @id @default(autoincrement())
+  email               String    @unique
+  hashedPassword      String    @map("hashed_password")
+  role                Role      @default(READONLY)
+  resetPasswordToken  String?   @unique @map("reset_password_token")
+  resetPasswordSentAt DateTime? @map("reset_password_sent_at")
+  signInCount         Int       @default(0) @map("sign_in_count")
+  lastSignInAt        DateTime? @map("last_sign_in_at")
+  createdAt           DateTime  @default(now()) @map("created_at")
+  updatedAt           DateTime  @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Tribe {
+  id     Int      @id @default(autoincrement())
+  name   String   @db.VarChar(100)
+  people Person[]
+
+  @@map("tribes")
+}
+
+model Person {
+  id         Int         @id @default(autoincrement())
+  name       String      @db.VarChar(50)
+  lastName   String?     @map("last_name") @db.VarChar(50)
+  email      String?     @db.VarChar(50)
+  phone      String?     @db.VarChar(25)
+  website    String?     @db.VarChar(50)
+  twitter    String?     @db.VarChar(25)
+  thumbnail  String?     @db.VarChar(255)
+  tribeId    Int?        @map("tribe_id")
+  tribe      Tribe?      @relation(fields: [tribeId], references: [id])
+  audios     Audio[]
+  answers    Answer[]
+  interviews Interview[]
+
+  @@map("people")
+}
+
+model Group {
+  id      Int      @id @default(autoincrement())
+  name    String   @db.VarChar(25)
+  answers Answer[]
+
+  @@map("groups")
+}
+
+model Page {
+  id              Int             @id @default(autoincrement())
+  name            String?         @db.VarChar(50)
+  description     String?         @db.Text
+  backgroundImage String?         @map("background_image") @db.VarChar(50)
+  backgroundColor String?         @map("background_color") @db.VarChar(10)
+  pageInterviews  PageInterview[]
+
+  @@map("pages")
+}
+
+model Interview {
+  id              Int             @id @default(autoincrement())
+  name            String          @db.VarChar(255)
+  personId        Int?            @map("person_id")
+  dateOfInterview DateTime?       @map("date_of_interview")
+  person          Person?         @relation(fields: [personId], references: [id])
+  questions       Question[]
+  pageInterviews  PageInterview[]
+
+  @@map("interviews")
+}
+
+model Question {
+  id            Int        @id @default(autoincrement())
+  name          String     @db.VarChar(1000)
+  questionOrder Int        @default(0) @map("question_order")
+  interviewId   Int?       @map("interview_id")
+  interview     Interview? @relation(fields: [interviewId], references: [id])
+  answers       Answer[]
+
+  @@map("questions")
+}
+
+model Answer {
+  id           Int           @id @default(autoincrement())
+  answer       String        @db.Text
+  questionId   Int?          @map("question_id")
+  personId     Int?          @map("person_id")
+  groupId      Int?          @map("group_id")
+  question     Question?     @relation(fields: [questionId], references: [id])
+  person       Person?       @relation(fields: [personId], references: [id])
+  group        Group?        @relation(fields: [groupId], references: [id])
+  answerAudios AnswerAudio[]
+
+  @@map("answers")
+}
+
+model Audio {
+  id           Int           @id @default(autoincrement())
+  name         String        @db.VarChar(50)
+  personId     Int?          @map("person_id")
+  path         String?       @db.VarChar(500)
+  person       Person?       @relation(fields: [personId], references: [id])
+  answerAudios AnswerAudio[]
+
+  @@map("audios")
+}
+
+model AnswerAudio {
+  id       Int    @id @default(autoincrement())
+  answerId Int    @map("answer_id")
+  audioId  Int    @map("audio_id")
+  answer   Answer @relation(fields: [answerId], references: [id], onDelete: Cascade)
+  audio    Audio  @relation(fields: [audioId], references: [id], onDelete: Cascade)
+
+  @@unique([answerId, audioId])
+  @@map("answer_audios")
+}
+
+model PageInterview {
+  id          Int       @id @default(autoincrement())
+  pageId      Int       @map("page_id")
+  interviewId Int       @map("interview_id")
+  page        Page      @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  interview   Interview @relation(fields: [interviewId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, interviewId])
+  @@map("page_interviews")
+}
